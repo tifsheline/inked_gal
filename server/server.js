@@ -62,7 +62,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res) {
   res.status(err.status || 500)
   res.end(JSON.stringify({
-    message: err.message;
+    message: err.message,
     error: {}
   }))
 })
