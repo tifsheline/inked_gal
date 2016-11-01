@@ -6,7 +6,8 @@ var
 
 var User = new Schema({
   username: String,
-  password: String
+  password: String,
+  instagram: String
 })
 
 User.plugin(passportLocalMongoose)

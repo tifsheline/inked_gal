@@ -10,7 +10,7 @@ var
   hash = require('bcrypt-nodejs'),
   path = require('path'),
   passport = require('passport'),
-  passportConfig = require('./config/passport.js')
+  passportConfig = require('./config/passport.js'),
   apiRoutes = require('./routes/inks.js'),
   PORT = process.env.port || 3000
 
@@ -25,8 +25,8 @@ var User = require('./models/User.js')
 //middleware
 app.use(logger('dev'))
 app.use(bodyParser.json())
-app.use(express.static(path.join(__dirname,'../client')))
-app.use(bodyParser.urlencoded({ extended: false}))
+app.use(express.static(path.join(__dirname, '../client')))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(require('express-session')({
   secret: 'keyboard cat',
