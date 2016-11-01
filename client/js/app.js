@@ -1,4 +1,4 @@
-angular.module('inkedGal', ['ui.router'])
+var inkedGal = angular.module('inkedGal', ['ui.router'])
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', router])
 
 function router($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -16,16 +16,16 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'LoginController as loginCtrl'
+      controller: 'loginController as loginCtrl'
     })
     .state('logout', {
       url: '/logout',
-      controller: 'LogoutController'
+      controller: 'logoutController'
     })
     .state('register', {
       url: '/register',
       templateUrl: 'templates/register.html',
-      controller: 'RegisterController as registerCtrl'
+      controller: 'registerController as registerCtrl'
     })
     .state('profile', {
       url: '/profile',
@@ -60,7 +60,7 @@ inkedGal.run(function($rootScope, $location, $state, AuthService) {
     AuthService.getUserStatus()
       .then(function() {
         console.log(toState)
-        if)(toState.restricted && !AuthService.isLoggedIn()) {
+        if(toState.restricted && !AuthService.isLoggedIn()) {
           $state.go('login');
         }
       })

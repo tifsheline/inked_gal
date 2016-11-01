@@ -1,15 +1,15 @@
 angular.module('inkedGal')
-  .controller('MainController', MainController)
-  .controller('LoginController', LoginController)
-  .controller('LogoutController', LogoutController)
-  .controller('RegisterController', RegisterController)
+  .controller('mainController', mainController)
+  .controller('loginController', loginController)
+  .controller('logoutController', logoutController)
+  .controller('registerController', registerController)
 
-MainController.$inject = ['$rootScope', '$state', 'AuthService']
-LoginController.$inject = ['$state', 'AuthService']
-LogoutController.$iject = ['$state', 'AuthService']
-RegisterController.$inject = ['$state', 'AuthService']
+mainController.$inject = ['$rootScope', '$state', 'AuthService']
+loginController.$inject = ['$state', 'AuthService']
+logoutController.$iject = ['$state', 'AuthService']
+registerController.$inject = ['$state', 'AuthService']
 
-function MainController($rootScope, $state, AuthService) {
+function mainController($rootScope, $state, AuthService) {
   var vm = this
 
   $rootScope.$on('$stateChangeStart', function(event) {
