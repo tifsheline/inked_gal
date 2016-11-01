@@ -8,12 +8,19 @@
 
     <title>Inked Gal</title>
 
+    <!--  Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
     <!--  Angular -->
     <script src="/js/angular.js" charset="utf-8"></script>
     <!--  Angular-UI-Router -->
     <script src="/js/angular-ui-router.js" charset="utf-8"></script>
-    
+
     <script src="/js/app.js" charset="utf-8"></script>
+
+    <script src="/js/services.js" charset="utf-8"></script>
 
     <!--  Controllers -->
     <script src="/js/controllers/createCtrl.js" charset="utf-8"></script>
@@ -22,7 +29,10 @@
     <script src="/js/controllers/inksCtrl.js" charset="utf-8"></script>
     <script src="/js/controllers/mainCtrl.js" charset="utf-8"></script>
   </head>
-  <body ng-controller="MainController as main">
+  <body class="container" ng-controller="MainController as main">
+
+      Hello, {{ main.currentUser.username }}
+
     <ui-view></ui-view>
   </body>
 </html>

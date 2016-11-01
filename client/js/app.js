@@ -10,7 +10,27 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'templates/home.html'
+      templateUrl: 'templates/home.html',
+      restricted: true
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginController as loginCtrl'
+    })
+    .state('logout', {
+      url: '/logout',
+      controller: 'LogoutController'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'templates/register.html',
+      controller: 'RegisterController as registerCtrl'
+    })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'templates/profile.html',
+      restricted: true
     })
     .state('inks', {
       url: '/inks',
@@ -33,3 +53,16 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
       // controller: 'EditInkController as eic'
     })
 }
+
+inkedGal.run(function($rootScope, $location, $state, AuthService) {
+  $rootScope.$on("stateChangeError", console.log.bind(console));
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+    AuthService.getUserStatus()
+      .then(function() {
+        console.log(toState)
+        if)(toState.restricted && !AuthService.isLoggedIn()) {
+          $state.go('login');
+        }
+      })
+  })
+})
