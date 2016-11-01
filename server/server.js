@@ -17,9 +17,9 @@ app.use(express.static('client'))
 
 app.use('/api', apiRoutes)
 
-// app.get('*', function(req, res) {
-//   res.sendFile('/client/index.html', {root: './'})
-// })
+app.get('*', function(req, res) {
+  res.sendFile('/client/index.html', {root: './'})
+})
 
 app.listen(PORT, function(err) {
   console.log(err || "Server running of port " + PORT)
