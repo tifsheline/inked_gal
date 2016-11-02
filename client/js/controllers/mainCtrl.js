@@ -17,6 +17,7 @@ function mainController($rootScope, $state, AuthService, $http) {
     AuthService.getUserStatus()
       .then(function(data) {
         vm.currentUser = data.data.user
+        console.log(vm.currentUser)
         if(vm.currentUser) {          $http.get('/user/instagram-media?instagram='
       + vm.currentUser.instagram)
           .success(function(data) {

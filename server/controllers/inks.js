@@ -1,4 +1,5 @@
 var
+  User = require('../models/User.js'),
   Ink = require('../models/Ink.js')
 
 module.exports = {
@@ -24,10 +25,19 @@ function show(req, res) {
 }
 
 function create(req, res) {
-  Ink.create(req.body, function(err, ink) {
-    if(err) return console.log(err)
-    res.json({success: true, message: "Ink created!", ink: ink})
+  // User.findOne({_id: req.user._id}, function(err, user) {
+  User.findOne({_id: "581935ce8053d909522e71cb"}, function(err, user) {
+    var newInk = new Ink(req.body)
+    newInk._by = user
+    newInk.save(function(err, ink) {
+      if(err) return console.log(err)
+      user.inks.push(ink)
+      user.save(function(err) {
+        res.json({success: true, message: "Ink created!", ink: ink})
+      })
+    })
   })
+
 }
 
 function update(req, res) {

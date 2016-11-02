@@ -42,12 +42,6 @@ app.use('/api', apiRoutes)
 
 app.use('/user/', apiRoutes)
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../client', 'index.html'))
-})
-
-app.use('/profile/', apiRoutes)
-
 app.get('*', function(req, res) {
   res.sendFile('/client/index.html', {root: './'})
 })

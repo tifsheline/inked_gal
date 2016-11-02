@@ -3,7 +3,8 @@ var
   inksRouter = express.Router(),
   passport = require('passport'),
   inksCtrl = require('../controllers/inks.js'),
-  User = require('../models/User.js')
+  User = require('../models/User.js'),
+  request = require('request')
 
   inksRouter.route('/inks')
     .get(inksCtrl.index)
