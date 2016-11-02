@@ -8,7 +8,8 @@ var User = new Schema({
   username: String,
   password: String,
   instagram: String
-})
+},
+inks: [{ytpe: mongoose.Schema.Types.ObjectId, ref: 'Inks'}])
 
 User.plugin(passportLocalMongoose)
 

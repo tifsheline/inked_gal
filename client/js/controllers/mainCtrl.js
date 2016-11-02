@@ -12,8 +12,6 @@ registerController.$inject = ['$state', 'AuthService']
 function mainController($rootScope, $state, AuthService, $http) {
   var vm = this
 
-  //This method is being called on 'start' ??
-  //twice when root route
   $rootScope.$on('$stateChangeStart', function(event) {
     console.log("Changing states")
     AuthService.getUserStatus()
@@ -21,18 +19,18 @@ function mainController($rootScope, $state, AuthService, $http) {
         vm.currentUser = data.data.user
         if(vm.currentUser) {          $http.get('/user/instagram-media?instagram='
       + vm.currentUser.instagram)
-            .success(function(data) {
-              console.log(data)
-              vm.currentUser.photos = data.items
+          .success(function(data) {
+            console.log(data)
+            vm.currentUser.photos = data.items
             })
         }
       })
-    vm.$state = $state
+    // vm.$state = $state
   })
 
-  vm.clearFilter = function() {
-    vm.inkFilter = ''
-  }
+  // vm.clearFilter = function() {
+  //   vm.inkFilter = ''
+  // }
 }
 
 //Login Controller:
