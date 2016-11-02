@@ -1,1 +1,15 @@
 <h1>INDEX OF ALL INK</h1>
+
+<!--  Pluralize results if more than 1 or 0 -->
+<small>
+  ({{filteredInks.length}} Ink<span ng-if="filteredInks.length > 1 || !filteredInks.length">s</span>)
+</small>
+
+<div class="card">
+  <img class="card-img-top" ng-src="{{vm.currentUser.photos}}" alt="Card image cap">
+  <div class="card-block clearfix ink" ng-repeat="ink in ic.inks | filter: inkFilter as filteredInks">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

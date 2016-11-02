@@ -1,5 +1,8 @@
 var inkedGal = angular.module('inkedGal', ['ui.router'])
-  .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', router])
+
+inkedGal.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', router])
+
+inkedGal.directive('navigationBar', navigationBar)
 
 function router($stateProvider, $urlRouterProvider, $locationProvider) {
   //remove '/#/' from url:
@@ -10,8 +13,7 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'templates/home.html',
-      restricted: true
+      templateUrl: 'templates/home.html'
     })
     .state('login', {
       url: '/login',
@@ -52,6 +54,13 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'templates/update.html',
       // controller: 'EditInkController as eic'
     })
+}
+
+function navigationBar() {
+  return{
+    restrict: 'E',
+    templateUrl: 'partials/nav.html'
+  }
 }
 
 inkedGal.run(function($rootScope, $location, $state, AuthService) {

@@ -1,1 +1,9 @@
-<h1>Current User: {{ main.currentUser.username }}</h1>
+<h1>Hi, {{ main.currentUser.username }}</h1>
+
+<div ng-controller="logoutController as logoutCtrl">
+  <a ng-click='logoutCtrl.logout()' class="btn btn-default">Logout</a>
+</div>
+
+<div class="images">
+  <img ng-repeat="image in main.currentUser.photos" ng-src="{{ image.images.low_resolution.url }}">
+</div>

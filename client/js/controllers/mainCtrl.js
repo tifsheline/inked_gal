@@ -4,19 +4,28 @@ angular.module('inkedGal')
   .controller('logoutController', logoutController)
   .controller('registerController', registerController)
 
-mainController.$inject = ['$rootScope', '$state', 'AuthService']
+mainController.$inject = ['$rootScope', '$state', 'AuthService', '$http']
 loginController.$inject = ['$state', 'AuthService']
 logoutController.$iject = ['$state', 'AuthService']
 registerController.$inject = ['$state', 'AuthService']
 
-function mainController($rootScope, $state, AuthService) {
+function mainController($rootScope, $state, AuthService, $http) {
   var vm = this
 
+  //This method is being called on 'start' ??
+  //twice when root route
   $rootScope.$on('$stateChangeStart', function(event) {
     console.log("Changing states")
     AuthService.getUserStatus()
       .then(function(data) {
         vm.currentUser = data.data.user
+        if(vm.currentUser) {          $http.get('/user/instagram-media?instagram='
+      + vm.currentUser.instagram)
+            .success(function(data) {
+              console.log(data)
+              vm.currentUser.photos = data.items
+            })
+        }
       })
     vm.$state = $state
   })
@@ -48,7 +57,7 @@ function loginController($state, AuthService) {
       .catch(function() {
         console.log("Oh no, something went wrong...")
         vm.error = true
-        vm.errorMessage = "Invalid username and/or passord"
+        vm.errorMessage = "Invalid username and/or password"
         vm.disabled = false
         vm.loginForm = {}
       })
@@ -76,7 +85,7 @@ function registerController($state, AuthService) {
     vm.disabled = true
 
     //call register from service
-    AuthService.register(vm.registerForm.username, vm.registerForm.password)
+    AuthService.register(vm.registerForm.username, vm.registerForm.password, vm.registerForm.instagram)
     //handle success
       .then(function() {
         $state.go('profile')

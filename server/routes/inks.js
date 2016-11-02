@@ -15,7 +15,7 @@ var
     .delete(inksCtrl.destroy)
 
   inksRouter.post('/register', function(req, res) {
-    User.register(new User({ username: req.body.username }), req.body.password, function(err, account) {
+    User.register(new User({ username: req.body.username, instagram: req.body.instagram }), req.body.password, function(err, account) {
       if(err) {
         return res.status(500).json({
           err: err
@@ -71,5 +71,15 @@ var
       user: req.user
     })
   })
-  
+
+  inksRouter.get('/instagram-media', function(req, res) {
+    request.get('https://www.instagram.com/' +
+'oooohegettinit'
+    // req.query.instagram
+    +
+    '/media/', function(err, response, body) {
+      res.json(JSON.parse(body))
+    })
+  })
+
 module.exports = inksRouter

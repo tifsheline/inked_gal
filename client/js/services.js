@@ -84,12 +84,12 @@ angular.module('inkedGal').factory('AuthService', ['$q', '$timeout', '$http', fu
       return deferred.promise
   }
 
-  function register(username, password) {
+  function register(username, password, instagram) {
     //create a new instance of deferred
     var deferred = $q.defer()
 
     //send a post request to the Server
-    $http.post('/user/register', {username: username, password: password})
+    $http.post('/user/register', {username: username, password: password, instagram: instagram})
 
     //handle success
       .success(function(data, status) {

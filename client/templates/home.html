@@ -1,27 +1,25 @@
 <h1>HOME PAGE</h1>
 
-<div ng-controller="logoutController as logoutCtrl">
-  <a ng-click='logoutCtrl.logout()' class="btn btn-default">Logout</a>
+<div class="col-md-4">
+  <h1>Login</h1>
+  <div ng-show="loginCtrl.error" class="alert alert-danger">{{ loginCtrl.errorMessage }}</div>
+  <form class="form" ng-submit="loginCtrl.login()">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" ng-model="loginCtrl.loginForm.username" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+        <input type="password" class="form-control" name="password" ng-model="loginCtrl.loginForm.password" required>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-default" ng-disabled="loginCtrl.disabled">Login</button>
+      </div>
+  </form>
 </div>
 
-<div id="login" class="text-center">
-    <h1>Login</h1>
+<br>
 
-    <form action="/login" method="post">
-        <div class="form-group">
-            <label>Email</label>
-            <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
+<p>Or , <a ui-sref="register">Sign Up</a>!</p>
 
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
-    </form>
-
-    <br>
-
-<p>Or , <a sref="/register">Sign Up</a>!</p>
-
-    <hr/>
+<hr/>
