@@ -1,37 +1,11 @@
-<!-- <section class="sect-banner">
-  <ul class="kf-slider">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
 
-  <div class="v-center"> -->
+<div class="">
+  <h1>Inked Gal</h1>
+  <p>Find inspirations for new ink and put your ink on display.</p>
 
-    <div class="col-md-4">
-      <h1>Inked Gal</h1>
-      <p>Find inspirations for new ink and put your ink on display.</p>
+  <br>
 
-      <h1>Login</h1>
-      <div ng-show="loginCtrl.error" class="alert alert-danger">{{ loginCtrl.errorMessage }}</div>
-      <form class="form" ng-submit="loginCtrl.login()">
-        <div class="form-group">
-          <label>Username</label>
-          <input type="text" class="form-control" name="username" ng-model="loginCtrl.loginForm.username" required>
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-            <input type="password" class="form-control" name="password" ng-model="loginCtrl.loginForm.password" required>
-          </div>
-          <div>
-            <button type="submit" class="btn btn-default" ng-disabled="loginCtrl.disabled">Login</button>
-          </div>
-      </form>
-    </div>
+  <button class="btn btn-default" ui-sref="login">Login</button>
 
-    <br>
-
-    <p>Or , <a ui-sref="register">Sign Up</a>!</p>
+  <button class="btn btn-default" ui-sref="register">Sign Up</button>
   </div>
-
-<!-- </section> -->

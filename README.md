@@ -3,9 +3,9 @@
 <br>
 ###About:
 
-In the modern age of social media, students have various platforms for communicating with friends and family alike.  What’s missing is a place for students to connect to other students without the noise of status updates and tweets.  **nUPath** provides a noise free, safe zone for students to discuss academia and their achievements.   
+All ink lovers know that the only thing better than ink is fresh ink.  We're constantly looking for new inspirations for our art.  **InkedGal** provides a way for ink lovers to storyboard their tattoo ideas.     
 
-**nUPath** is designed with the purpose of helping students get a jumpstart on their career path after graduation.  High school Juniors and Seniors can use nUPath as their first online resume/portfolio.  College students can use nUPath to enhance their resume building skills and gain access to other universities and employers.  Through nUPath, students can connect worldwide to teachers, professors, faculty members, and fellow students.  
+When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo owner or their artist.  **InkedGal**  is designed so that users have a link to tattooee and tattooer.  
 
 <br>
 [Visit site here](https://stormy-tundra-22793.herokuapp.com/login)
@@ -21,11 +21,9 @@ Dash board of the site:
 
 Philippe Luchansky
 
-TA Conrad
+Jimmy Garzon
 
 Roland Abregorivas
-
-Team KAT
 
 ---
 
@@ -48,8 +46,8 @@ Team KAT
 <br><br>
 ###Technologies Used
 >* Languages: Javascript, HTML5/CSS
->* Web-Application Frameworks: Node.js [Express | Socket.IO | SocketStream]
->* Front-end Libraries: jQuery, Bootstrap
+>* Web-Application Frameworks: Node.js [Express |
+>* Front-end Libraries: Angular, Bootstrap
 >* Database: MongoDB
 >* Object Relational/Document Mappers: Mongoose
 >* CSS pre-compilers: SaSS
@@ -79,16 +77,9 @@ Team KAT
 <hr>
 User POV:
 
-1. As a user, I can create a profile by providing their name, email address and school affiliation.
+1. As a user, I can create a profile by providing my name, email address and Instagram username.
 
-2. As a user, I can build their online portfolio by completing the achievements form.
-
-3. As a user, I have access to a newsfeed where they can post questions or comments.
-
-4. As a user, I can make comments on other users' post.
-
-5. As a user, I can send messages to other users through the direct messaging feature.
-
+2. As a user, I can build a storyboard by searching the index and bookmarking images I like to my profile.
 
 ---
 
@@ -96,22 +87,17 @@ User POV:
 <hr>
 1. As a user, I want to upload photos.
 
-2. As a user, I want to follow other users.
+2. As a user, I want to comment on other users photos.
 
-3. As a user, I want to have a link to my profile which I can send to schools, universities, and employers so they can view my profile.
+3. As a user, I want to like other users' photos.
 
-4. As a user, I want to make comments on other users' pages (for example, congratulate a student for an achievement).
-
-
-###Contribution:
-
-
+4. As a user, I want to have a link to my and other users' profiles on Instagram.
 
 ###Acknowledgements:
 Credits:<br>
 
 * npm packages:
 
-npm Packeges| Author/Authors
+npm Packages| Author/Authors
 --------------|------
 express | ganey
