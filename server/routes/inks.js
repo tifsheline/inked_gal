@@ -73,11 +73,8 @@ var
   })
 
   inksRouter.get('/instagram-media', function(req, res) {
-    request.get('https://www.instagram.com/' +
-'oooohegettinit'
-    // req.query.instagram
-    +
-    '/media/', function(err, response, body) {
+    request.get('https://www.instagram.com/' + req.query.instagram
+    + '/media/', function(err, response, body) {
       res.json(JSON.parse(body))
     })
   })
