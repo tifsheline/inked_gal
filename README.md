@@ -3,7 +3,7 @@
 <br>
 ###About:
 
-All ink lovers know that the only thing better than ink is fresh ink.  We're constantly looking for new inspirations for our art.  **InkedGal** provides a way for ink lovers to storyboard their tattoo ideas.     
+All ink enthusiast know that the only thing better than ink is fresh ink.  We're constantly looking for new inspirations for our art.  **InkedGal** provides a way for ink lovers to storyboard their tattoo ideas.     
 
 When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo owner or their artist.  **InkedGal**  is designed so that users have a link to the tattoo artist.  
 

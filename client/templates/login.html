@@ -1,3 +1,23 @@
+<style media="screen">
+  .bckg-img{
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+    width: 100%;
+  }
+  h1{
+    font-size: 50px;
+  }
+  p{
+    font-size: 25px;
+  }
+</style>
+
+<div>
+  <img src="https://secure.static.tumblr.com/f3d08c1193c69dc3458750bca3c6e2f8/mmstozy/O3Hnifse9/tumblr_static_filename_640_v2.gif" class="bckg-img" />
+</div>
+
 <div class="col-md-4">
   <h1>Login</h1>
   <div ng-show="loginCtrl.error" class="alert alert-danger">{{ loginCtrl.errorMessage }}</div>
@@ -11,7 +31,7 @@
         <input type="password" class="form-control" name="password" ng-model="loginCtrl.loginForm.password" required>
       </div>
       <div>
-        <button type="submit" class="btn btn-default" ng-disabled="loginCtrl.disabled">Login</button>
+        <button type="submit" class="btn btn-default btn-lg" ng-disabled="loginCtrl.disabled">Login</button>
       </div>
   </form>
 </div>

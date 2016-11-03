@@ -1,6 +1,12 @@
-<h1>Hi, {{ main.currentUser.username }}</h1>
+<style media="screen">
+  h1{
+    font-size: 50px;
+  }
+</style>
 
-<div ng-controller="logoutController as logoutCtrl">
+<h1 class="text-center">Hi, {{ main.currentUser.username }}</h1>
+
+<div class="text-center" ng-controller="logoutController as logoutCtrl">
   <a ng-click='logoutCtrl.logout()' class="btn btn-default">Logout</a>
 </div>
 
