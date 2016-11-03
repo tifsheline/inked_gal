@@ -16,7 +16,22 @@ function mainController($rootScope, $state, $http, AuthService) {
 
   vm.addImage = function(img) {
     console.log(img)
-    // vm.addImage.push(img)
+
+    $http.post('/inks/' + vm.currentUser._id + '/inks', img)
+      .then(function(data) {
+        console.log(data)
+        vm.data.data.image = vm.data.data.image ? true : false
+        vm.image = data.data.image
+      })
+  }
+
+  vm.deleteImage = function(obj) {
+    console.log(vm.currentUser.inks[0].inksId);
+      $http.delete('/inks/' + vm.currentUser._id + '/inks/' + inks.inksId)
+        .then(function(data) {
+          console.log(data)
+          vm.image = data.data.image
+        })
   }
   $rootScope.$on('$stateChangeStart', function(event) {
     console.log("Changing states")

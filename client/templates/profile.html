@@ -10,6 +10,10 @@
   <a ng-click='logoutCtrl.logout()' class="btn btn-default">Logout</a>
 </div>
 
-<div ng-repeat="image in main.currentUser.photos" class="images">
-  <img ui-sref="inks({id: image._id})" ng-src="{{ image.images.low_resolution.url }}" ng-click="main.addImage(image)">
+<hr>
+
+<div class="row">
+  <div ng-repeat="image in main.currentUser.photos" class="text-center">
+    <img class="col-md-4 img-thumbnail" ui-sref="inks({id: image._id})" ng-src="{{ image.images.low_resolution.url }}" ng-click="main.addImage(image)">
+  </div>
 </div>

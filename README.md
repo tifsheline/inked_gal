@@ -3,16 +3,16 @@
 <br>
 ###About:
 
-All ink enthusiast know that the only thing better than ink is fresh ink.  We're constantly looking for new inspirations for our art.  **InkedGal** provides a way for ink lovers to storyboard their tattoo ideas.     
+All ink enthusiast know that the only thing better than ink is fresh ink.  We're constantly looking for new inspiration for our body art.  **InkedGal** provides a way for ink lovers to storyboard their tattoo ideas.     
 
-When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo owner or their artist.  **InkedGal**  is designed so that users have a link to the tattoo artist.  
+When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo artist.  **InkedGal**  is designed so that users have a link to tattoo artists through Instagram even if they don't have an Instagram account.  By simply clicking on the image, a user can post that image to their INKspiration page.
 
 <br>
 [Visit site here](https://stormy-tundra-22793.herokuapp.com/login)
 
 Dash board of the site:
 
-![nupath_dashboard](public/images/nupath_dashboard.png)
+![inkedGal_dashboard](css/images/InkedGal_dashboard.png)
 
 
 ---
@@ -23,21 +23,19 @@ Philippe Luchansky
 
 Jimmy Garzon
 
+John Meredith
+
 Roland Abregorivas
+
+Troy Carson
 
 ---
 
 ###Content
-*	Access to site
-	1. Remote
-	2. Locally
-* Instructions
 * Data Modeling
 * Technologies Used
-* Lags
 * User Stories
 * Future implementations
-* Contribution
 * Acknowledgement
 <br><br><br><br><br>
 
@@ -58,28 +56,20 @@ Roland Abregorivas
 
 ---
 
-###Access to site
-
-
-
-###Instructions
-
-
-
 ### Data Modeling
 
-![nupath_ERD](public/images/nupath_ERD.png)
-![nupath_homepage_wireframe](public/images/nupath_homepage_wireframe.png)
-![nupath_profilepg_wireframe](public/images/nupath_profilepg_wireframe.png)
+![InkedGal_ERD](css/images/InkedGal_ERD.png)
+![InkedGal_homepage_wireframe](css/images/InkedGal_homepage_wireframe.png)
+![InkedGal_inkspg_wireframe](css/images/InksGal_inkspg_wireframe.png)
 ---
 
 ###User Stories
 <hr>
 User POV:
 
-1. As a user, I can create a profile by providing my name, email address and Instagram username.
+1. As a user, I can create a profile by providing my name, email address and my favorite tattoo artists' Instagram handle.
 
-2. As a user, I can build a storyboard by searching the index and bookmarking images I like to my profile.
+2. As a user, I can build an inspiration board by bookmarking images I like to my INKspiration page.
 
 ---
 
@@ -89,9 +79,11 @@ User POV:
 
 2. As a user, I want to comment on other users photos.
 
-3. As a user, I want to like other users' photos.
+3. As a user, I want to like other users' and artists' photos.
 
-4. As a user, I want to have a link to my and other users' profiles on Instagram.
+4. As a user, I want to have a link to other users' INKspirations.
+
+5. As a user, I want a mapping feature so I can easily locate tattoo studios.
 
 ###Acknowledgements:
 Credits:<br>
