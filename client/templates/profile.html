@@ -4,6 +4,6 @@
   <a ng-click='logoutCtrl.logout()' class="btn btn-default">Logout</a>
 </div>
 
-<div class="images">
-  <img ng-repeat="image in main.currentUser.photos" ng-src="{{ image.images.low_resolution.url }}">
+<div ng-repeat="image in main.currentUser.photos" class="images">
+  <img ui-sref="inks({id: image._id})" ng-src="{{ image.images.low_resolution.url }}" ng-click="main.addImage(image)">
 </div>

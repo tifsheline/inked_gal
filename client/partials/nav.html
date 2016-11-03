@@ -1,10 +1,15 @@
 
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <link <link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">
 
   <style media="screen">
     .navbar-brand{
-      font-family: 'Rock Salt', cursive;
+      font-family: 'Arizonia', cursive;
+      font-size: 40px;
+    }
+    .mynavi{
+      color: #FF0045;
+      font-size: 20px;
     }
   </style>
 </head>
@@ -13,8 +18,8 @@
 <br>
 
 <br>
-
-    <nav class="navbar navbar-default navbar-custom affix navbar-fixed-top">
+  <div class="mynavi">
+    <nav ng-if="main.currentUser" class="navbar navbar-default navbar-custom affix navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
 
@@ -35,17 +40,8 @@
             <li><a ui-sref="inks">Inks</a></li>
           </ul>
 
-          <!-- Filter -->
-          <form ng-show="main.$state.includes('inks')" class="navbar-form navbar-right">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Filter List" ng-model="inkFilter">
-              <div class="input-group-btn">
-                <button ng-click="inkFilter = ''" ng-disabled="!inkFilter" class="btn btn-default" type="button">
-                  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
               </div>
             </div>
           </form>
-        </div>
+        </nav>
       </div>
-    </nav>

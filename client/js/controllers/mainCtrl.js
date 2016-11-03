@@ -4,14 +4,20 @@ angular.module('inkedGal')
   .controller('logoutController', logoutController)
   .controller('registerController', registerController)
 
-mainController.$inject = ['$rootScope', '$state', 'AuthService', '$http']
+mainController.$inject = ['$rootScope', '$state', '$http', 'AuthService', ]
 loginController.$inject = ['$state', 'AuthService']
 logoutController.$iject = ['$state', 'AuthService']
 registerController.$inject = ['$state', 'AuthService']
 
-function mainController($rootScope, $state, AuthService, $http) {
+function mainController($rootScope, $state, $http, AuthService) {
   var vm = this
 
+  vm.loggedIn = AuthService.isLoggedIn()
+
+  vm.addImage = function(img) {
+    console.log(img)
+    // vm.addImage.push(img)
+  }
   $rootScope.$on('$stateChangeStart', function(event) {
     console.log("Changing states")
     AuthService.getUserStatus()
@@ -24,15 +30,10 @@ function mainController($rootScope, $state, AuthService, $http) {
             console.log(data)
             vm.currentUser.photos = data.items
             })
-        }
+          }
+        })
       })
-    // vm.$state = $state
-  })
-
-  // vm.clearFilter = function() {
-  //   vm.inkFilter = ''
-  // }
-}
+    }
 
 //Login Controller:
 function loginController($state, AuthService) {
@@ -60,8 +61,8 @@ function loginController($state, AuthService) {
         vm.disabled = false
         vm.loginForm = {}
       })
+    }
   }
-}
 
 //Logout controller:
 function logoutController($state, AuthService) {
@@ -72,8 +73,8 @@ function logoutController($state, AuthService) {
       .then(function() {
         $state.go('login')
       })
+    }
   }
-}
 
 //Register Controller:
 function registerController($state, AuthService) {
@@ -98,5 +99,5 @@ function registerController($state, AuthService) {
         vm.disabled = false
         vm.registerForm = {}
       })
+    }
   }
-}

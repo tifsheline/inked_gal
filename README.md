@@ -5,7 +5,7 @@
 
 All ink lovers know that the only thing better than ink is fresh ink.  We're constantly looking for new inspirations for our art.  **InkedGal** provides a way for ink lovers to storyboard their tattoo ideas.     
 
-When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo owner or their artist.  **InkedGal**  is designed so that users have a link to tattooee and tattooer.  
+When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo owner or their artist.  **InkedGal**  is designed so that users have a link to the tattoo artist.  
 
 <br>
 [Visit site here](https://stormy-tundra-22793.herokuapp.com/login)
