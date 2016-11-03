@@ -85,6 +85,8 @@ User POV:
 
 5. As a user, I want a mapping feature so I can easily locate tattoo studios.
 
+6. As a user, I want a search feature to find inks and tattoo artist.
+
 ###Acknowledgements:
 Credits:<br>
 

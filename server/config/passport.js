@@ -5,6 +5,12 @@ var
 
 passport.use(new localStrategy(User.authenticate()))
 passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
+
+// used to deserialize the user
+passport.deserializeUser(function(username, done) {
+    User.findOne({username: username}).populate('inks').exec(function(err, user) {
+        done(err, user);
+    });
+});
 
 module.exports = passport

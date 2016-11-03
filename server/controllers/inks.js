@@ -28,7 +28,7 @@ function create(req, res) {
 
   console.log(req.body);
 
-  User.findById({_id: req.body.userId}, function(err, user) {
+  User.findOne({_id: req.body.userId}, function(err, user) {
     var newInk = new Ink(req.body)
     newInk._by = user
     newInk.save(function(err, ink) {

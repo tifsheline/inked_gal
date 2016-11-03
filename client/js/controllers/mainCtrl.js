@@ -16,12 +16,14 @@ function mainController($rootScope, $state, $http, AuthService) {
 
   vm.addImage = function(img) {
     console.log(img)
-
-    $http.post('/inks/' + vm.currentUser._id + '/inks', img)
+    console.log(img.images.standard_resolution.url)
+    var newInk = {
+      url: img.images.standard_resolution.url
+    }
+    $http.post('/user/users/' + vm.currentUser._id + '/inks', newInk)
       .then(function(data) {
         console.log(data)
-        vm.data.data.image = vm.data.data.image ? true : false
-        vm.image = data.data.image
+        $state.go('inks')
       })
   }
 
