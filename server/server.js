@@ -12,10 +12,11 @@ var
   passport = require('passport'),
   passportConfig = require('./config/passport.js'),
   apiRoutes = require('./routes/inks.js'),
+  dotenv = require('dotenv').load({silent: true})
   PORT = process.env.port || 3000
 
 //mongoose connection
-mongoose.connect('mongodb://localhost/inkedgal', function(err) {
+mongoose.connect(process.env.MONGO_URL, function(err) {
   console.log(err || "Connected to MongoDB!")
 })
 

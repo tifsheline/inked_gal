@@ -16,9 +16,9 @@ function mainController($rootScope, $state, $http, AuthService) {
 
   vm.addImage = function(img) {
     console.log(img)
-    console.log(img.images.standard_resolution.url)
+    console.log(img.images.low_resolution.url)
     var newInk = {
-      url: img.images.standard_resolution.url
+      url: img.images.low_resolution.url
     }
     $http.post('/user/users/' + vm.currentUser._id + '/inks', newInk)
       .then(function(data) {
