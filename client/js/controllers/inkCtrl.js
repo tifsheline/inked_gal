@@ -13,7 +13,7 @@ function SingleInkController($stateParams, $state, InkFactory) {
     })
 
   vm.destroyInk = function() {
-    InkFactory.detroy(vm.ink._id)
+    InkFactory.destroy(vm.ink._id)
       .success(function(data) {
         $state.go('inks')
       })

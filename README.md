@@ -87,6 +87,8 @@ User POV:
 
 6. As a user, I want a search feature to find inks and tattoo artist.
 
+7. As a user, I want to delete images from my INKspiration board.
+
 ###Acknowledgements:
 Credits:<br>
 

@@ -4,9 +4,9 @@ angular.module('inkedGal')
   .controller('logoutController', logoutController)
   .controller('registerController', registerController)
 
-mainController.$inject = ['$rootScope', '$state', '$http', 'AuthService', ]
+mainController.$inject = ['$rootScope', '$state', '$http', 'AuthService']
 loginController.$inject = ['$state', 'AuthService']
-logoutController.$iject = ['$state', 'AuthService']
+logoutController.$inject = ['$state', 'AuthService']
 registerController.$inject = ['$state', 'AuthService']
 
 function mainController($rootScope, $state, $http, AuthService) {
