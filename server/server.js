@@ -12,7 +12,7 @@ var
   passport = require('passport'),
   passportConfig = require('./config/passport.js'),
   apiRoutes = require('./routes/inks.js'),
-  dotenv = require('dotenv').load({silent: true})
+  dotenv = require('dotenv').load({silent: true}),
   PORT = process.env.port || 3000
 
 //mongoose connection
