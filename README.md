@@ -17,6 +17,43 @@ Dash board of the site:
 
 ---
 
+### Local installation instructions
+
+Download the repository to your preferred directory.
+
+ Create a .env file in the root of the project.
+
+ Add this key/value pair: MONGO_URL={link to your mongo database}
+
+ Start a MongoDB local database if not using a remote database.
+
+ From the terminal and in your installation directory run
+
+ `npm install`
+
+ to install the dependent packages.
+
+ Start the server by running the command
+
+ `nodemon`
+
+ in the terminal from your installation directory.
+
+ [localhost:3000 ](localhost:3000)
+
+ to use the site locally.
+
+### How To Contribute
+1. Fork it.
+
+2. Create your feature branch: git checkout -b new-feature.
+
+3. Commit your changes: git commit -m 'Some feature'.
+
+4. Push to your feature branch: git push origin new-feature.
+
+5. Submit a pull request.
+
 ###Acknowledgement
 
 Philippe Luchansky
