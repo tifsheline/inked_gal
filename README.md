@@ -60,7 +60,7 @@ Troy Carson
 
 ![InkedGal_ERD](client/css/images/InkedGal_ERD.png)
 ![InkedGal_homepage_wireframe](client/css/images/InkedGal_homepage_wireframe.png)
-![InkedGal_inkspg_wireframe](client/css/images/InksGal_inkspg_wireframe.png)
+![InkedGal_inkspg_wireframe](client/css/images/InkedGal_inkspg_wireframe.png)
 ---
 
 ###User Stories
