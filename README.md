@@ -8,11 +8,11 @@ All ink enthusiast know that the only thing better than ink is fresh ink.  We're
 When Googling tattoo images or finding inspiration on Pinterest, there's no direct connect to the tattoo artist.  **InkedGal**  is designed so that users have a link to tattoo artists through Instagram even if they don't have an Instagram account.  By simply clicking on the image, a user can post that image to their INKspiration page.
 
 <br>
-[Visit site here](https://stormy-tundra-22793.herokuapp.com/login)
+[Visit site here](https://inkedgal.herokuapp.com/)
 
 Dash board of the site:
 
-![inkedGal_dashboard](css/images/InkedGal_dashboard.png)
+![inkedGal_dashboard](client/css/images/InkedGal_dashboard.png)
 
 
 ---
@@ -58,9 +58,9 @@ Troy Carson
 
 ### Data Modeling
 
-![InkedGal_ERD](css/images/InkedGal_ERD.png)
-![InkedGal_homepage_wireframe](css/images/InkedGal_homepage_wireframe.png)
-![InkedGal_inkspg_wireframe](css/images/InksGal_inkspg_wireframe.png)
+![InkedGal_ERD](client/css/images/InkedGal_ERD.png)
+![InkedGal_homepage_wireframe](client/css/images/InkedGal_homepage_wireframe.png)
+![InkedGal_inkspg_wireframe](client/css/images/InksGal_inkspg_wireframe.png)
 ---
 
 ###User Stories
